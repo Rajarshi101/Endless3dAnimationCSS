@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap');
+body,html{
+	margin:0;
+	padding:0;
+	background: linear-gradient(-20deg, #000, #1A237E);
+	height:1400px;
+}
+.title-1{
+	color:#FFF;
+	text-align:center;
+	display:table;
+	position:relative;
+	margin:auto;
+	margin-bottom:60px;
+font-family: Verdana;
+}
+.title-1::after{
+	content:"";
+	position:absolute;
+	width:100%;
+	background:#FFF;
+	height:3px;
+	left:0;
+	bottom:-10px;
+	
+}
+.wrapper{
+	position:absolute;
+    margin-left: 17%;
+    margin-top: 2rem
+	/* top:50%;
+	left:50%; */
+	/* transform: translate(-50%,-50%); */
+}
+.wrapper .wrapper-content{
+	width:1000px;
+    color: #FFF;
+}
+
+.displaycard-list{
+	display:flex;
+	justify-content: space-evenly;
+    margin: 2rem;
+	width:100%;
+}
+
+.display-card.card-design1{
+	background:url(../Media/Loop1.jpg) center center no-repeat;
+		background-size: cover;
+}
+.display-card.card-design2{
+	background:url(../Media/Loop2.jpg) center center no-repeat;
+		background-size: cover;
+}
+.display-card.card-design3{
+	background:url(../Media/Loop3.jpg) center center no-repeat;
+		background-size: cover;
+}
+.display-card.card-design4{
+	background:url(../Media/Atom.jpg) center center no-repeat;
+		background-size: cover;
+}
+.display-card.card-design5{
+	background:url(../Media/ComingSoon.jpg) center center no-repeat;
+		background-size: cover;
+}
+
+.display-card{
+	height:220px;
+	width: 380px;
+	border-radius:10px;
+	box-shadow: 14px 14px 0 0 rgba(0,0,0,0.1);
+	position:relative;
+	z-index:1;
+	transition:.3s all ease;
+}
+
+.display-card::after{
+	content:"";
+	position:absolute;
+	bottom:-40px;
+	left:-90px;
+	background:url(https://www.seekpng.com/png/full/153-1536250_coral-reefs-png-coral-reef-cartoon-png.png) center center no-repeat;
+	background-size:cover;
+	width:200px;
+	height:200px;
+	z-index:-1;
+}
+.display-card .card-description{
+	color:#FFF;
+	position:absolute;
+	bottom:-10%;
+	left:-10%;
+	max-width: 70%;
+	background:rgba(0,0,0,0.3);
+	border-radius:10px;
+	padding:20px;
+	backdrop-filter: blur(6px);
+	font-family: Verdana;
+	
+	transition:.2s all;
+	overflow:hidden;
+}
+.display-card .card-description .description-layers{
+	width:380px;
+	display:flex;
+
+}
+.display-card .card-description .description-layers .always-visible{
+	width:70%;
+}
+.display-card .card-description .description-layers .hover-visible{
+	width:30%;
+	opacity:0%;
+}
+.display-card:hover .card-description .description-layers .hover-visible{
+	width:30%;
+	opacity:100%;
+}
+.display-card .card-description h3{
+	padding:0;
+	margin:0;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 1.5rem;
+}
+
+.display-card:hover{
+	box-shadow: 18px 18px 0 0 rgba(0,0,0,0.05);
+	transform: scale(1.05);
+}
+.display-card:hover .card-description{
+	max-width:100%;
+	background:rgba(0,0,0,0.6);
+}
+
+.button{
+	padding:5px 15px;
+	font-size: .75rem;
+	border-radius:10px;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+		transition: .1s ease
+}
+
+.button.button-white{
+	border: 2px #FFF solid;
+	color:#FFF;
+
+}
+
+.button.button-white:hover{
+	background:#FFF;
+	color:#000;
+	
+}
+.button.button-white:active{
+	background:#000;
+	color:#FFF;
+	border:2px #000 solid;;
+	
+}
